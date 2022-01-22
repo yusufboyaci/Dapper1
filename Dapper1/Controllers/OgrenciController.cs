@@ -21,12 +21,7 @@ namespace Dapper1.Controllers
             {
                 con.Open();
                 con.Execute("insert into OgrenciTanim(Id,Isim,Soyisim,DogumTarih) values(@Id,@Isim,@Soyisim,@DogumTarih)", new OgrenciTanim()
-                {
-                    //Id = Guid.NewGuid(),
-                    //Isim = "Ali",
-                    //Soyisim = "Yıldızöz",
-                    //DogumTarih = DateTime.Now
-
+                {                  
                     Id = Guid.NewGuid().ToString(),
                     Isim = model.Isim,
                     Soyisim = model.Soyisim,
