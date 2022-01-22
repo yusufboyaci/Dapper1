@@ -1,0 +1,45 @@
+﻿@model OgrenciTanim
+
+@{
+    ViewData["Title"] = "AddOgrenci";
+}
+
+<h1>AddOgrenci</h1>
+
+<h4>OgrenciTanim</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddOgrenci">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                
+                <input type="hidden" asp-for="Id" class="form-control" />
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="Isim" class="control-label"></label>
+                <input asp-for="Isim" class="form-control" />
+                <span asp-validation-for="Isim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyisim" class="control-label"></label>
+                <input asp-for="Soyisim" class="form-control" />
+                <span asp-validation-for="Soyisim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DogumTarih" class="control-label"></label>
+                <input asp-for="DogumTarih" class="form-control" />
+                <span asp-validation-for="DogumTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
